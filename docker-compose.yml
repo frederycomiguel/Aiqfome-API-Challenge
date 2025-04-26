@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    container_name: aiqfome-api
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/aiqfome
+    depends_on:
+      - db
+    networks:
+      - aiqfome-net
+    restart: always
+
+  db:
+    image: postgres:13-alpine
+    container_name: aiqfome-db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: aiqfome
+    volumes:
+      - aiqfome-db-data:/var/lib/postgresql/data
+    networks:
+      - aiqfome-net
+    restart: always
+
+networks:
+  aiqfome-net:
+    driver: bridge
+
+volumes:
+  aiqfome-db-data:
+    driver: local
