@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # 🛒 Aiqfome API Challenge
 
 Projeto de API desenvolvido para simular cadastro de clientes e favoritos de produtos utilizando a Fake Store API.
@@ -7,7 +6,7 @@ Projeto de API desenvolvido para simular cadastro de clientes e favoritos de pro
 
 - Node.js
 - Express.js
-- Sequelize ORM 
+- Sequelize ORM
 - PostgreSQL
 - Docker e Docker Compose
 - Swagger (para documentação da API)
@@ -18,16 +17,16 @@ Siga os passos abaixo para subir o ambiente completo utilizando Docker:
 
 1. Clone o repositório:
 
-\`\`\`bash
-git clone https://seurepositorio.git
+```bash
+git clone https://github.com/frederycomiguel/Aiqfome-API-Challenge
 cd aiqfome-api
-\`\`\`
+```
 
 2. Suba os containers com Docker Compose:
 
-\`\`\`bash
+```bash
 docker-compose up --build
-\`\`\`
+```
 
 3. Acesse a aplicação:
 
@@ -45,26 +44,26 @@ docker-compose up --build
 
 Após subir o projeto, a documentação Swagger estará disponível em:
 
-\`\`\`
+```bash
 http://localhost:3000/api-docs
-\`\`\`
+```
 
 Você poderá testar os endpoints diretamente por lá.
 
 ## 🛠️ Comandos úteis
 
 - Subir ambiente:
-  \`\`\`bash
+```bash
   docker-compose up --build
-  \`\`\`
+  ```
 - Derrubar ambiente:
-  \`\`\`bash
+ ```bash
   docker-compose down
-  \`\`\`
+ ```
 - Ver logs:
-  \`\`\`bash
+  ```bash
   docker logs -f nome_do_container
-  \`\`\`
+  ```
 
 ## ✅ Endpoints principais
 
